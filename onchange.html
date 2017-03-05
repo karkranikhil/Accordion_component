@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+  <title>onchange(component)</title>
+  <style>
+    .oddRow {
+      background-color: #dddddd;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+   <input placeholder="Enter your name " ng-model="name">
+        <on-changes name="name"> </on-changes>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+  <script>
+    
+     var app = angular.module('myApp', [])
+  // navigation template
+app.component('onChanges', {
+  bindings: {
+    name: '<'
+  },
+  template: '<h1>{{$ctrl.greeting}}</h1> ',
+  controller: function() {
+     this.$onChanges = function (obj) {
+	 console.log(obj);
+    if (obj.name && this.name) {
+      var prefix="hello";
+      this.greeting = prefix + this.name;
+      
+    }
+       
+    // if the name is undefined clear greeting
+       
+    if(!this.name) {
+      this.greeting = ''
+    }
+     
+  };
+  }
+});
+
+  </script>
+</body>
+</html>

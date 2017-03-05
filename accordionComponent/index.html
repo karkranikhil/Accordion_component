@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="accordionModule">
+<head>
+  <title>parent child communication</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+	 <accordion>
+        <accordion-panel heading="Panel 1">
+                This is the body for panel 1
+        </accordion-panel>
+        <accordion-panel heading="Panel 2">            
+                This is the body for panel 2            
+        </accordion-panel>
+    </accordion>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+		 <script src="app.js"></script>
+		 <script src="accordionPanel.component.js"></script>
+		 <script src="accordion.component.js"></script>
+</body>
+</html>

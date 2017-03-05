@@ -1,0 +1,4 @@
+<h1><b>Users Details</b></h1><br>
+<user-list ng-repeat="user in $ctrl.list" user="user"
+             on-delete="$ctrl.deleteHero(user)" 
+             on-update="$ctrl.updateHero(user, key, value)"></user-list>

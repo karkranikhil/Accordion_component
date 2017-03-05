@@ -1,0 +1,13 @@
+<hr>
+<div class="col-sm-12">
+ 
+      <ul class="list-group">
+        <li class="col-sm-4 list-group-item">{{$ctrl.user.name}}</li>
+        <li class="col-sm-4 list-group-item">
+            <edit-user field-value="$ctrl.user.location" field-type="text" on-update="$ctrl.update('location', value)"></edit-user>
+         </li>
+        <li class="col-sm-4 list-group-item"><button ng-click="$ctrl.delete()">Delete</button></li>
+      </ul>
+      
+   
+</div>
